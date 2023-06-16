@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/scripts.js"></script>    
+    <title>Pizza Parlor</title>
+</head>
+<body>
+    <div>
+        <h1 class="container">Pizza Parlor</h1>
+        <h2>Customize your Pizza:</h2>
+    </div>
+    <div id="pizzaSize" class="container">
+        <label for="new-size">Size:</label>
+        <select name="pizza-size" id="pizza-size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="x-large">X-Large</option>
+        </select>
+        </div>
+        <br>
+    <div class="select-toppings">
+        <label for="select-toppings">Select Toppings:</label>
+        <label for="chicken">Chicken
+            <input type="checkbox" value="chicken">
+        </label>
+        <label for="pepperoni">Pepperoni
+            <input type="checkbox" value="pepperoni">
+        </label>
+        <label for="chicken">Sausage
+            <input type="checkbox" value="sausage">
+        </label>
+        <label for="chicken">Veggie
+            <input type="checkbox" value="Veggie">
+        </label>
+        </div>
+        <br>
+    <button type="submit">Order</button>
+
+    <div class="hidden" id="total-order">
+        <h3>Total order:</h3>
+        <p>Size: <span id="size"></span></p>
+        <p>Toppings: <span id="toppings"></span></p>
+        <p>Total: <span id="total-cost"></span></p>
+    </div>
+</body>
+</html>
