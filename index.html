@@ -9,10 +9,16 @@
 </head>
 <body>
     <div>
-        <h1 class="container">Pizza Parlor</h1>
+        <div class="header"></div>
+        <h1>Pizza Parlor</h1>
         <h2>Customize your Pizza:</h2>
     </div>
-    <div id="pizzaSize" class="container">
+    <div class="container">
+        <div class="form-container">
+            <form id="order-pizza">
+        </div>
+
+    <div class="new-size">
         <label for="new-size">Size:</label>
         <select name="pizza-size" id="pizza-size">
             <option value="small">Small</option>
@@ -22,7 +28,7 @@
         </select>
         </div>
         <br>
-    <div class="select-toppings">
+    <div id="select-toppings" class="container">
         <label for="select-toppings">Select Toppings:</label>
         <label for="chicken">Chicken
             <input type="checkbox" value="chicken">
@@ -39,6 +45,8 @@
         </div>
         <br>
     <button type="submit">Order</button>
+</form>
+</div>
 
     <div class="hidden" id="total-order">
         <h3>Total order:</h3>
@@ -46,5 +54,6 @@
         <p>Toppings: <span id="toppings"></span></p>
         <p>Total: <span id="total-cost"></span></p>
     </div>
+
 </body>
 </html>

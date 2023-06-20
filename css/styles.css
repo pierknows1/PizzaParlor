@@ -1,0 +1,17 @@
+
+/* Pizza.prototype.costToppings = function() {
+    let costToppings = 0;
+    if (this.costToppings === "Chicken"){
+        costToppings += 3;
+    }
+    else if (this.costToppings === "Pepperoni"){
+        costToppings += 4;
+    }
+    else if (this.costToppings === "sausage"){
+        costToppings += 5;
+    }
+    else if (this.costToppings === "Veggie"){
+        costToppings += 2;
+    }
+        return costToppings;
+    }
