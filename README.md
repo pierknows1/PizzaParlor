@@ -1,23 +1,24 @@
-#Pizza Parlor
-###by Pier Rodriguez
+# Pizza Parlor
+### by Pier Rodriguez
 ### Website that takes orders using object oriented javascript
 
-#Technologies Used
+# Technologies Used
+
 *Javascript
 *HTML
 *CSS
 *Git
 
-##Description
+### Description
 # The website takes different inputs, one can make selections between size and toppings. 
 
-##Setup/Installation
-#Use this link to view on pages https://github.com/pierknows1/PizzaParlor
+## Setup/Installation
+# Use this link to view on pages https://github.com/pierknows1/PizzaParlor
 
-###Known Bugs
+### Known Bugs
 *no known bugs
 
-#License
+# License
 
 #Tests - 
 
