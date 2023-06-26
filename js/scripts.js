@@ -1,79 +1,42 @@
 //business logic
 
-function Pizza(small) {
-    this.size = small;
+function Pizza(size){
+
+    this.size = size;
+
 }
 
-Pizza.protoytype.costSize = function() {
-    let costSize = 0;
-    if (this.size === "Small"){
-        costSize += 5;
+Pizza.prototype.crustCost = function () {
+    let crustCost = 0.0;
+    if (this.size === "Small") {
+      crustCost += 7.0;
+    } else if (this.size === "Medium") {
+      crustCost += 9.0;
+    } else if (this.size === "Large") {
+      crustCost += 20.0;
     }
-    else if (this.size === "Medium"){
-        costSize += 8;
-    }
-    else if (this.Size === "large"){
-        costSize += 11;
-    }
-    else if (this.size === "X-large"){
-        costSize += 15;
-    }
-        return costSize;
-    }; 
-
-
-Pizza.prototype.checkedToppings = function() {
-    let topping = [];
-    let toppingSelect = document.querySelectorAll("input[type=checkbox]:checked");
-    for (let i=0; i < toppingSelect.length; i++){
-        topping.push(toppingSelect[i].value);
-    }
-    return topping;
-};
-
-function AddPizza (topping) {
-
-    this.topping = topping;
-}
-
-AddPizza.prototype.checkToppingsCost = function(){
-    let topping = [];
-    let toppingSelect = document.querySelectorAll("input[type=checkbox]:checked")
-    for (let i=0; i < toppingSelect.length; i++){
-        if (toppingSelect[i].checked){
-            topping.push(toppingSelect[i]);
-        }
-    }
-    return topping.length;
-};
+    return crustCost;
+  };
 
 //ui logic
 
-function orderPizza(event){
+function OrderPizza (event){
     event.preventDefault();
-    let pizzaSize = document.getAnimations("pizza-size").value;
-    let pizzaToppings = document.querySelectorAll("input[type=checkbox]:checked");
-    let newPizza = new Pizza(pizzaSize);
-    let newAddpizza = new AddPizza (pizzaToppings);
-    let toppings = newPizza.checkedToppings();
+
+    const crustSize = document.getElementById("pizza-size").value;
+
+    let newPizza = new Pizza(crustSize);
+    let showOrder = document.getElementById("show-order");
     let totalOrder = document.getElementById("total-order");
-    let totalCost = document.getElementById("total-cost");
-    let pizzaTotal = newPizza.costSize() + newAddpizza.checkToppingsCost();
-    let totalSize = document.getElementById("size");
-    let checkedToppings = document.getElementById("toppings");
-    totalSize.innerText = newPizza.pizzaSize;
-    totalOrder.innerText = newAddpizza.pizzaToppings;
-    checkedToppings.innerText = toppings.join(", ");
-    totalCost.innerText = "$" + pizzaTotal;
-    totalOrder.removeAttribute("class");
+    let totalCost = newPizza.crustCost();
+    
+    let pizzaSize = document.getElementById("size"); 
+
+    pizzaSize.innerText = newPizza.size;
+    totalOrder.innerText = "$" + totalCost;
+    showOrder.removeAttribute("class");
 }
 
-    window.addEventListener("load", function(){
-        document.getElementById("order-pizza").addEventListener("submit,OrderPizza");
-    });
-
-
-
-
-
-
+window.addEventListener("load", function () {
+    document.getElementById("select-order").addEventListener("submit", OrderPizza);
+  });

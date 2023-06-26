@@ -1,59 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/scripts.js"></script>    
     <title>Pizza Parlor</title>
 </head>
 <body>
-    <div>
-        <div class="header"></div>
-        <h1>Pizza Parlor</h1>
-        <h2>Customize your Pizza:</h2>
-    </div>
-    <div class="container">
-        <div class="form-container">
-            <form id="order-pizza">
-        </div>
-
-    <div class="new-size">
-        <label for="new-size">Size:</label>
-        <select name="pizza-size" id="pizza-size">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="x-large">X-Large</option>
-        </select>
-        </div>
+    <div class="intro">
+        <h2> Pizza</h2>
+      </div>
+      <div class="container">
+        <div class="form-container"></div>
+        <form id="select-order">
+        
+        <div class="select-size">
+            <label for="select-size">Select a size:</label>
+            <select name="pizza-size" id="pizza-size">
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+            </select>
         <br>
-    <div id="select-toppings" class="container">
-        <label for="select-toppings">Select Toppings:</label>
-        <label for="chicken">Chicken
-            <input type="checkbox" value="chicken">
-        </label>
-        <label for="pepperoni">Pepperoni
-            <input type="checkbox" value="pepperoni">
-        </label>
-        <label for="chicken">Sausage
-            <input type="checkbox" value="sausage">
-        </label>
-        <label for="chicken">Veggie
-            <input type="checkbox" value="Veggie">
-        </label>
-        </div>
         <br>
-    <button type="submit">Order</button>
-</form>
-</div>
+            <div>
+                <button type="submit">Submit Order</button>
+            </form>
+            </div>
 
-    <div class="hidden" id="total-order">
-        <h3>Total order:</h3>
-        <p>Size: <span id="size"></span></p>
-        <p>Toppings: <span id="toppings"></span></p>
-        <p>Total: <span id="total-cost"></span></p>
-    </div>
+            <div class="hidden" id="show-order">
+                <h2>Your Order:</h2>
+                <p>Size: <span id="size"></span></p>
+                <p>Toppings: <span id="toppings"></span></p>
+                <p>Sides: <span id="sides"></span></p>
+                <p>Total: <span id="total-order"></span></p>
+            </div>
 
 </body>
 </html>
