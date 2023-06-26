@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +11,10 @@
 </head>
 <body>
     <div class="intro">
-        <h2> Pizza</h2>
-      </div>
+        <img src="pizzaa.jpg">
+        <h2> Pizza Piero</h2>
+        </div>
+
       <div class="container">
         <div class="form-container"></div>
         <form id="select-order">
@@ -25,6 +28,27 @@
             </select>
         <br>
         <br>
+            <div class="choose-topping">
+                <label for="choose-topping">Choose Toppings:</label>
+                <label for="Chicken">Chicken
+                <input type="checkbox" value="Chicken">
+                </label>
+                <label for="Veggie">Veggie
+                <input type="checkbox" value="Veggie">
+                </label>
+                <label for="Sausage">Sausage
+                <input type="checkbox" value="Sausage">
+                </label>
+                <label for="Pepperoni">Pepperoni
+                <input type="checkbox" value="Pepperoni">
+                </label>
+
+            </div>
+        
+
+        
+        <br>
+        <br>
             <div>
                 <button type="submit">Submit Order</button>
             </form>
@@ -34,7 +58,6 @@
                 <h2>Your Order:</h2>
                 <p>Size: <span id="size"></span></p>
                 <p>Toppings: <span id="toppings"></span></p>
-                <p>Sides: <span id="sides"></span></p>
                 <p>Total: <span id="total-order"></span></p>
             </div>
 
